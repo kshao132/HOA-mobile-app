@@ -1,139 +1,94 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
-import Image from 'next/image';
-
-import { motion, useInView, useAnimation } from 'motion/react';
-
-import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
-
-// Single content array with all items
-const CONTENT_ITEMS = [
-  { type: 'text', content: 'Our latest innovation', index: 0 },
+const apps = [
   {
-    type: 'image',
-    imageSrc: '/images/landing/value-proposition/1.png',
-    alt: 'Sonic Product 1',
-    index: 1,
+    name: 'Tassajara Hills',
+    subtitle: 'Services App',
+    description: 'For Tassajara Hills community residents',
+    href: 'https://apps.apple.com/us/app/tassajara-hills/id6748569418',
+    color: 'from-blue-500 to-cyan-500',
+    emoji: '🏘️',
   },
-  { type: 'text', content: 'in portable speakers', index: 2 },
-  { type: 'text', content: 'combines superior sound quality', index: 3 },
   {
-    type: 'image',
-    imageSrc: '/images/landing/value-proposition/2.png',
-    alt: 'Sonic Product 2',
-    index: 4,
+    name: 'HOA App',
+    subtitle: 'General HOA Management',
+    description: 'For all HOA community members',
+    href: 'https://apps.apple.com/us/app/hoa/id6447296089',
+    color: 'from-green-500 to-emerald-500',
+    emoji: '🏡',
   },
-  { type: 'text', content: 'with unmatched durability', index: 5 },
 ];
 
-const ValueProposition = () => {
-  const controls = useAnimation();
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.7 });
-  const prefersReducedMotion = usePrefersReducedMotion();
-
-  useEffect(() => {
-    if (isInView || prefersReducedMotion) {
-      controls.start('visible');
-    }
-  }, [isInView, controls, prefersReducedMotion]);
-
-  // Combined animation variants
-  const variants = {
-    text: {
-      hidden: {
-        opacity: 0,
-        y: 10,
-        filter: 'blur(8px)',
-      },
-      visible: {
-        opacity: 1,
-        y: 0,
-        filter: 'blur(0px)',
-        transition: {
-          duration: 0.9,
-          ease: [0.22, 1, 0.36, 1],
-        },
-      },
-    },
-
-    image: {
-      hidden: {
-        opacity: 0,
-        scale: 1.05,
-        y: -5,
-        filter:
-          'blur(8px) brightness(1.07) drop-shadow(0 20px 30px rgba(0,0,0,0.15))',
-        transition: {
-          duration: 0.7,
-          ease: [0.25, 0.1, 0.25, 1],
-        },
-      },
-      visible: {
-        opacity: 1,
-        scale: 0.92,
-        filter: 'blur(0px) brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0))',
-        y: 0,
-        transition: {
-          duration: 0.9,
-          ease: [0.22, 1, 0.36, 1],
-        },
-      },
-    },
-
-    container: {
-      hidden: { opacity: 0 },
-      visible: {
-        opacity: 1,
-        transition: {
-          staggerChildren: 0.2,
-          delayChildren: 0.1,
-          ease: 'easeOut',
-          duration: 0.8,
-        },
-      },
-    },
-  };
-
+export default function ValueProposition() {
   return (
-    <section ref={sectionRef} className="bg-card py-15 md:py-20 lg:py-36">
-      <div className="container flex flex-col items-center justify-center text-center">
-        <motion.h2
-          className="text-2xl font-bold md:text-3xl lg:text-5xl"
-          variants={variants.container}
-          initial={prefersReducedMotion ? 'visible' : 'hidden'}
-          animate={controls}
-        >
-          {CONTENT_ITEMS.map((item, idx) =>
-            item.type === 'text' ? (
-              <motion.span
-                key={`feature-${idx}`}
-                className="m-1.5 inline-block md:m-4"
-                variants={variants.text}
-              >
-                {item.content}
-              </motion.span>
-            ) : (
-              <motion.div
-                key={`feature-${idx}`}
-                className="relative inline-block h-7.5 w-15 translate-y-1/4 overflow-visible lg:h-12.5 lg:w-22.5"
-                variants={variants.image}
-              >
-                <Image
-                  src={item.imageSrc || ''}
-                  alt={item.alt || ''}
-                  fill
-                  className="inline-block"
-                  style={{ willChange: 'transform' }}
-                />
-              </motion.div>
-            ),
-          )}{' '}
-        </motion.h2>
+    <section className="py-20 md:py-32 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 dark:from-orange-950/30 dark:via-amber-950/30 dark:to-yellow-950/30">
+      <div className="container max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Download Our Apps
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            Choose the perfect app for your community management needs
+          </p>
+        </div>
+
+        {/* App cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {apps.map((app, index) => (
+            <Link
+              key={index}
+              href={app.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative"
+            >
+              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+                {/* Gradient accent */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${app.color} opacity-5 rounded-3xl`} />
+                
+                {/* Content */}
+                <div className="relative space-y-6">
+                  {/* Icon */}
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${app.color} shadow-lg`}>
+                    <span className="text-3xl">{app.emoji}</span>
+                  </div>
+
+                  {/* Text */}
+                  <div className="space-y-2">
+                    <h3 className="text-3xl font-bold">{app.name}</h3>
+                    <p className="text-lg font-medium text-muted-foreground">
+                      {app.subtitle}
+                    </p>
+                    <p className="text-base text-muted-foreground">
+                      {app.description}
+                    </p>
+                  </div>
+
+                  {/* App Store button */}
+                  <div className="pt-4">
+                    <div className="inline-flex items-center gap-3 px-5 py-3 bg-black dark:bg-white text-white dark:text-black rounded-xl font-semibold group-hover:scale-105 transition-transform">
+                      <span className="text-2xl">🍎</span>
+                      <div className="text-left">
+                        <div className="text-xs opacity-80">Download on</div>
+                        <div className="text-base">App Store</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hover arrow */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default ValueProposition;
+}

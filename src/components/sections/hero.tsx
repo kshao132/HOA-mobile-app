@@ -102,7 +102,7 @@ const Hero = () => {
               : {}
           }
         >
-          Immersive Sound, Simplified
+          Modern Association Platform
         </motion.h1>
 
         <motion.p
@@ -116,8 +116,7 @@ const Hero = () => {
               : {}
           }
         >
-          Our most recent breakthrough in audio devices blends exceptional audio
-          performance with unparalleled toughness and elegance.
+          For Residents, Vendors and Board Members to simplify managing community associations and save time and reduce operational expenses
         </motion.p>
 
         <motion.div variants={item}>
