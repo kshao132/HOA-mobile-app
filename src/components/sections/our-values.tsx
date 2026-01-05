@@ -8,20 +8,20 @@ import { Card, CardHeader, CardContent } from '../ui/card';
 const values = [
   {
     icon: <Box className="size-6" />,
-    value: 'Simplicity',
+    value: 'Responsiveness',
     description:
-      'We believe less is more—our products are designed for intuitive use.',
+      'Tasks are completed quickly and accurately through a consistent and systematic process.',
   },
   {
     icon: <Shield className="size-6" />,
-    value: 'Quality',
+    value: 'Communication',
     description:
-      'From premium components to final sound output, every detail matters.',
+      'Questions and concerns are carefully heard and directed to the right people for prompt resolution.',
   },
   {
     icon: <Leaf className="size-6" />,
-    value: 'Sustainability',
-    description: "Thoughtful design that's better for the planet.",
+    value: 'Personalized Care',
+    description: "Every homeowner is treated as an individual, with thoughtful attention tailored to their needs.",
   },
 ];
 
@@ -30,9 +30,10 @@ export default function OurValues() {
     <section className="section-padding container space-y-10.5">
       <SectionHeader
         icon={<Box />}
-        category="Our Values"
-        title="What We Value"
-        description="We believe great sound should be simple, powerful and accessible. Our values are rooted in a deep respect for our community."
+        category="What We Value"
+        title="Our Core Values"
+        description="We operate with integrity, proactiveness and care. Our values are deeply
+        rooted in an admiration for the communities we serve."
       />
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

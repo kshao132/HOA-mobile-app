@@ -18,22 +18,22 @@ export default function ContactPage() {
           </h1>
         </div>
         <p className="text-xl">
-          You can contact us via email, phone, or by filling out the form on
-          this page. We strive to respond promptly and look forward to
-          connecting with you soon!
+        You can contact our team by email, phone, or by completing the contact form 
+        on this page. We respond promptly to all inquiries and look forward to helping you with your 
+        needs.
         </p>
 
         <div className="flex items-center gap-2.5 rounded-full">
           <div className="border-input flex size-9 items-center justify-center rounded-full border">
             <MessageSquare className="text-muted-foreground size-5" />
           </div>
-          <span className="text-xl">example@gmail.com</span>
+          <span className="text-xl">info@hoaalchemy.com</span>
         </div>
         <div className="flex items-center gap-2.5 rounded-full">
           <div className="border-input flex size-9 items-center justify-center rounded-full border">
             <Phone className="text-muted-foreground size-5" />
           </div>
-          <span className="text-xl">+1-555-44-456</span>
+          <span className="text-xl">+1 (925) 319-5758</span>
         </div>
       </div>
 
@@ -48,11 +48,11 @@ export default function ContactPage() {
             <div className="flex gap-10">
               <div className="flex-1 space-y-1.5">
                 <Label htmlFor="firstname">First name</Label>
-                <Input type="text" id="firstname" placeholder="Jane" />
+                <Input type="text" id="firstname" placeholder="John" />
               </div>
               <div className="flex-1 space-y-1.5">
                 <Label htmlFor="lastname">Last name</Label>
-                <Input type="text" id="lastname" placeholder="Smith" />
+                <Input type="text" id="lastname" placeholder="Doe" />
               </div>
             </div>
 

@@ -10,7 +10,7 @@ export default function WhySonic() {
     <section className="relative flex min-h-[420px] w-full items-center md:min-h-[512px] 2xl:min-h-[700px]">
       <div className="absolute inset-0">
         <Image
-          src="/images/products/product-5.webp"
+          src="/images/products/wavy_background_2.avif"
           alt="Sonic Product"
           fill
           className="object-cover"
@@ -19,13 +19,12 @@ export default function WhySonic() {
       <div className="from-base-dark dark:from-background absolute inset-0 bg-linear-to-r to-transparent" />
       <div className="relative z-10 container">
         <h2 className="text-background dark:text-foreground text-5xl font-bold md:text-6xl">
-          Why Sonic?
+          Why HOA Alchemy?
         </h2>
         <p className="text-background dark:text-foreground mt-4 mb-8 max-w-2xl text-xl">
-          Every Sonic speaker is engineered for real life—compact yet bold,
-          tough yet refined. Whether you're deep in a busy city or off the grid,
-          Sonic delivers consistent, high-quality audio in a sleek form you'll
-          love to show off.
+        Alchemy is a modern platform that helps community associations manage daily work in one place. 
+        It makes it easier for boards, residents, and vendors to stay organized, approve requests, 
+        track finances, and keep communities running smoothly.
         </p>
         <Button
           variant="outline"

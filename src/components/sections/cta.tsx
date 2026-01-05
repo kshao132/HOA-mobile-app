@@ -21,7 +21,7 @@ const CTA = () => {
       <div className="container flex flex-col justify-between gap-8 md:flex-row md:gap-16">
         <div className="space-y-6 sm:min-w-[440px] md:space-y-8 lg:w-[569px] lg:shrink-0">
           <h2 className="text-5xl leading-13 font-bold md:text-6xl md:leading-18">
-            Get your perfect speaker now!
+            Start working with us now!
           </h2>
 
           <AnimatedBorderButton
@@ -30,7 +30,7 @@ const CTA = () => {
             className="gap-2.5 pe-3 [&_svg]:transition-transform hover:[&_svg]:translate-x-0.25"
           >
             <Link href="/">
-              Get yours - 10% off
+              Let's go!
               <span className="bg-background text-foreground rounded-full p-2">
                 <ChevronRight />
               </span>
@@ -38,10 +38,9 @@ const CTA = () => {
           </AnimatedBorderButton>
         </div>
         <div className="max-w-xl space-y-4">
-          <h3 className="text-3xl font-bold">Bring every room together</h3>
+          <h3 className="text-3xl font-bold">Simplified HOA Management</h3>
           <p className="text-xl leading-8">
-            Experience our latest portable speaker innovation, delivering
-            exceptional sound quality, a comfortable design, and sleek design.
+            Bring documents, finances, building management, communication, and service requests into one platform.
           </p>
         </div>
       </div>

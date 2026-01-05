@@ -2,9 +2,9 @@
   "products": [
     {
       "id": "sonic-light-white",
-      "name": "Sonic Light",
-      "description": "Premium Smart Soundbar",
-      "price": 599,
+      "name": "Essentials",
+      "description": "HOA Mobile App for Residents & Vendors Association website for residents & vendors Unified Messaging : Talk, TEXT, PUSH, USPS communication with residents and vendors",
+      "price": 25,
       "originalPrice": 699,
       "image": "/images/products/product-1.webp",
       "specifications": {
@@ -112,9 +112,9 @@
     },
     {
       "id": "sonic-light-wood",
-      "name": "Sonic Light",
-      "description": "Premium Smart Soundbar",
-      "price": 599,
+      "name": "Standard",
+      "description": "Everything from Essentials + Financial Transparency : Community Bank balance info to all residents Banking : Accounts Receivable, Accounts Payable, Lockbox and Statement processing Escrow: Send HOA documents to buyer vs. expense document management solutions offered by traditional management companies Mobile Application",
+      "price": 50,
       "originalPrice": 699,
       "image": "/images/products/product-2.webp",
       "specifications": {
@@ -222,9 +222,9 @@
     },
     {
       "id": "sonic-light-black",
-      "name": "Sonic Light",
-      "description": "Premium Smart Soundbar",
-      "price": 599,
+      "name": "Everything",
+      "description": "Everything from Standard + Check In Check Out : Allows Landscape, Mananagement, Pool, tree crew & other HOA vendors to check in and check out Find my Crew : Allows managers, boards to find where vendors servicing the association are",
+      "price": 75,
       "originalPrice": 699,
       "image": "/images/products/product-3.webp",
       "specifications": {

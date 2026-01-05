@@ -5,21 +5,22 @@ export function AboutHero() {
     <section className="hero-padding container flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-16">
       <div className="space-y-8">
         <h1 className="text-5xl leading-13 font-bold text-balance md:text-6xl md:leading-18">
-          Sound Designed for Life
+          About HOA Alchemy
         </h1>
         <p className="max-w-3xl text-xl leading-8">
-          At Sonic, we're redefining how you experience audio—merging premium
-          sound quality with sleek, durable design. Built for everyday moments
-          and extraordinary adventures, our speakers are crafted to deliver
-          deep, immersive sound wherever life takes you.
+        Alchemy is a community association management platform designed to help residents seamlessly 
+        connect with their vendors. Our all-in-one solution centralizes documents, finances, building 
+        management, communication, and service requests—making every aspect of association living more 
+        efficient, transparent, and easy to manage.
         </p>
       </div>
       <Image
-        src="/images/products/main-product.webp"
+        src="/images/products/people_together.avif"
         alt="Sonic Logo"
-        width={700}
-        height={528}
-        className="aspect-[6.44/5.28] object-contain"
+        width={775}
+        height={560}
+        // className="aspect-[6.44/5.28] object-contain"
+        className="rounded-2xl object-contain shadow-lg"
         priority
       />
     </section>

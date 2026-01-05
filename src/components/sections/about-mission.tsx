@@ -6,12 +6,12 @@ const missions = [
   {
     title: 'Our Mission',
     description:
-      "To craft beautifully designed speakers that deliver powerful, crystal-clear sound—whether you're relaxing at home, exploring the outdoors, or hosting a party. Sound that moves with you, wherever life takes you.",
+      "To modernize community association living for residents, board members, and vendors with an integrated communication, management, and financial management platform.",
   },
   {
     title: 'Our Vision',
     description:
-      'To become a global leader in portable audio innovation—blending performance, durability, and design into one seamless experience that connects people through the power of sound.',
+      'Provide a modern platform with best-in-class applications that use AI and automation to deliver positive resident experiences at the lowest possible cost.',
   },
 ];
 
@@ -20,7 +20,7 @@ const AboutMission = () => {
     <section className="section-padding container flex flex-col items-center gap-8 lg:flex-row lg:gap-16">
       <div className="relative h-[340px] w-full sm:h-[600px] sm:min-w-[440px] lg:w-[569px] lg:shrink-0">
         <Image
-          src="/images/about/who-we-are.webp"
+          src="/images/products/four_houses.jpg"
           alt="Our Team"
           fill
           className="rounded-3xl object-cover object-top"

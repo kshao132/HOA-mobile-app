@@ -36,8 +36,8 @@ export default function PricingSection() {
       <SectionHeader
         icon={<DollarSign />}
         category="Pricing"
-        title="Simple Pricing, Exceptional Value"
-        description="We believe great sound shouldn't come with hidden costs or confusing plans."
+        title="Transparent prices"
+        description="No markups added to providers fees."
       />
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10.5">
@@ -58,12 +58,12 @@ export default function PricingSection() {
               >
                 <div className="bg-card mb-4 rounded-3xl pt-8 pb-4">
                   <CardHeader className="relative h-[310px]">
-                    <Image
+                    {/* <Image
                       src={product.image}
                       alt={product.name}
                       fill
                       className="object-contain transition-all duration-300 group-hover:scale-105"
-                    />
+                    /> */}
                     <m.div
                       initial={false}
                       animate={{
@@ -89,12 +89,12 @@ export default function PricingSection() {
                     className="space-y-1.5"
                   >
                     <div className="flex items-center gap-1">
-                      <span>${product.price}</span>
-                      {product.originalPrice && (
+                      <span>${product.price} / mo</span>
+                      {/* {product.originalPrice && (
                         <span className="line-through opacity-50">
                           ${product.originalPrice}
                         </span>
-                      )}
+                      )} */}
                     </div>
                     <h3 className="text-2xl font-bold">{product.name}</h3>
                     <p>{product.description}</p>
