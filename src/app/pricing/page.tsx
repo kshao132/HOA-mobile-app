@@ -16,7 +16,7 @@ import productsData from '@/data/products.json';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 
-const DEFAULT_HOVERED_CARD_INDEX = 1;
+const DEFAULT_HOVERED_CARD_INDEX = -1; /* -1 for no default hover */
 
 export default function PricingSection() {
   const { products: _productsData } = productsData;
@@ -57,13 +57,20 @@ export default function PricingSection() {
                 }
               >
                 <div className="bg-card mb-4 rounded-3xl pt-8 pb-4">
-                  <CardHeader className="relative h-[310px]">
+                  {/* <CardHeader className="relative h-[310px]"> */}
+                  <CardHeader className="relative h-[310px] flex items-center pb-8 justify-center pr-13">
                     {/* <Image
                       src={product.image}
                       alt={product.name}
                       fill
                       className="object-contain transition-all duration-300 group-hover:scale-105"
                     /> */}
+                    <div className="flex items-top gap-2 whitespace-nowrap">
+                      <h1 className="text-6xl font-bold">$</h1>
+                      <h1 className="text-8xl font-bold text-center">{product.price}</h1>
+                      <h1 className="text-4xl self-center text-gray-500">/mo</h1>
+                    </div>                
+                    
                     <m.div
                       initial={false}
                       animate={{
@@ -89,7 +96,7 @@ export default function PricingSection() {
                     className="space-y-1.5"
                   >
                     <div className="flex items-center gap-1">
-                      <span>${product.price} / mo</span>
+                      {/* <span>${product.price} / mo</span> */}
                       {/* {product.originalPrice && (
                         <span className="line-through opacity-50">
                           ${product.originalPrice}
